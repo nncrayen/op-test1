@@ -1,0 +1,493 @@
+/*COLORES*/
+/*FUENTES*/
+/*
+#ffe88e amarillo palido
+#f8725d
+#d00320
+#ede4d5 cafe con leche
+#0b0203 negro elegante
+#202124 negro mas sutil
+#31212d
+#242424
+#333333
+dark-blue: #00214a
+lilac: #ebb3eb,
+	orange: #fc5b3d,
+	electric-light-blue: #3497d9
+	amarillo choro: #eed918
+	verde: 219110
+	rojo : c12929
+	azuloso 25253c
+	rojo hermoso ba 2121
+*/
+/*
+	font-family: 'Alegreya', serif;
+    font-family: 'Oswald', sans-serif;
+
+    font-family: 'PT Sans', sans-serif;
+
+    font-family: 'Raleway', sans-serif;
+
+    font-family: 'Ranchers', cursive;
+
+    font-family: 'Roboto Condensed', sans-serif;
+
+    font-family: 'Lato', sans-serif;
+*/
+.position-l-top {
+  background-size: cover;
+  background-position: left top;
+}
+
+.position-l-center {
+  background-size: cover;
+  background-position: left center;
+}
+
+.position-l-bottom {
+  background-size: cover;
+  background-position: left bottom;
+}
+
+.position-r-top {
+  background-size: cover;
+  background-position: right top;
+}
+
+.position-r-center {
+  background-size: cover;
+  background-position: right center;
+}
+
+.position-r-bottom {
+  background-size: cover;
+  background-position: right bottom;
+}
+
+.position-c-top {
+  background-size: cover;
+  background-position: center top;
+}
+
+.position-c-center {
+  background-size: cover;
+  background-position: center center;
+}
+
+.position-c-bottom {
+  background-size: cover;
+  background-position: center bottom;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+@media only screen and (min-width: 501px) {
+  header {
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  header {
+    margin-top: 40px;
+    margin-bottom: 100px;
+  }
+}
+header h1 {
+  font-family: "Anton", sans-serif;
+  font-size: 30px;
+  font-weight: none;
+  color: #ba2121;
+  letter-spacing: none;
+  line-height: none;
+  text-transform: none;
+}
+@media only screen and (min-width: 501px) {
+  header h1 {
+    color: #393939;
+  }
+}
+header .top-nav {
+  display: none;
+  padding-left: 30px;
+}
+@media only screen and (min-width: 501px) {
+  header .top-nav {
+    display: inline;
+  }
+  header .top-nav a {
+    margin-right: 30px;
+  }
+  header .top-nav a span {
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    color: #36414d;
+    letter-spacing: 1.4px;
+    line-height: none;
+    text-transform: lowercase;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+  }
+  header .top-nav a span:hover {
+    border-bottom-color: #328cc1;
+  }
+}
+header img {
+  width: 30px;
+  border: 3px solid #ba2121;
+}
+@media only screen and (min-width: 501px) {
+  header img {
+    display: none;
+  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+main section.principal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+main section.principal .box {
+  border-bottom: 4px solid black;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: none;
+  flex-direction: none;
+  align-items: flex-end;
+  height: 50vh;
+  width: 100%;
+}
+@media only screen and (min-width: 501px) {
+  main section.principal .box {
+    border: none;
+    width: 98%;
+    max-width: 930px;
+    height: 240px;
+    max-height: 240px;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main section.principal .box {
+    margin-bottom: 40px;
+  }
+}
+main section.principal .box .--container {
+  padding: 10px 20% 10px 10px;
+  width: 100%;
+}
+main section.principal .box .--container .tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: none;
+  flex-direction: column;
+  align-items: none;
+  font-family: "Oswald", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: white;
+  letter-spacing: 1.5px;
+  line-height: none;
+  text-transform: none;
+}
+main section.principal .box .--container .tags span.date {
+  font-family: "Oswald", sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  color: white;
+  letter-spacing: 1.5px;
+  line-height: none;
+  text-transform: none;
+  text-shadow: 2px 2px 15px black;
+}
+main section.principal .box .--container .tags h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 1.5px;
+  line-height: none;
+  text-transform: none;
+  text-shadow: 2px 2px 15px black;
+}
+@media only screen and (min-width: 1200px) {
+  main section.principal .box .--container .tags h3 {
+    font-size: 15px;
+    margin-bottom: 3px;
+  }
+}
+main section.principal .box .--container h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 27px;
+  font-weight: 600;
+  color: whitesmoke;
+  letter-spacing: none;
+  line-height: 29px;
+  text-transform: capitalize;
+  text-shadow: 2px 2px 15px black;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 1200px) {
+  main section.principal .box .--container h2 {
+    font-size: 33px;
+    line-height: 35px;
+    transition: 0.4s;
+    margin-bottom: 0px;
+  }
+  main section.principal .box .--container h2:hover {
+    color: #fc5b3d;
+  }
+}
+main section.principal .box1 {
+  height: 100vh;
+}
+@media only screen and (max-width: 500px) {
+  main section.principal .box1 .--container h2 {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+main section.destacado .--container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 930px;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: none;
+  flex-direction: none;
+  align-items: none;
+}
+@media only screen and (min-width: 501px) {
+  main section.destacado .--container {
+    width: 98%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main section.destacado .--container {
+    margin-top: 100px;
+  }
+}
+main section.destacado .--container .--title {
+  width: 80%;
+}
+main section.destacado .--container .--title p {
+  font-family: "Anton", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #444;
+  letter-spacing: none;
+  line-height: none;
+  text-transform: none;
+}
+main section.destacado .--container .box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: none;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+@media only screen and (min-width: 501px) {
+  main section.destacado .--container .box {
+    width: 50%;
+  }
+}
+main section.destacado .--container .box .--img {
+  width: 80%;
+  height: 200px;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 811px) {
+  main section.destacado .--container .box .--img {
+    height: 240px;
+  }
+}
+main section.destacado .--container .box .text-container {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: none;
+  flex-direction: none;
+  align-items: none;
+}
+@media only screen and (min-width: 811px) {
+  main section.destacado .--container .box .text-container {
+    border-left: 1px solid #dfdfdf;
+    box-sizing: border-box;
+    padding-left: 10px;
+  }
+}
+main section.destacado .--container .box .text-container .topic {
+  font-family: "Oswald", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: grey;
+  letter-spacing: 1.5px;
+  line-height: none;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+main section.destacado .--container .box .text-container h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: none;
+  line-height: 25px;
+  text-transform: capitalize;
+  display: inline;
+}
+@media only screen and (min-width: 1200px) {
+  main section.destacado .--container .box .text-container h2 {
+    line-height: 30px;
+    transition: 0.3s;
+  }
+  main section.destacado .--container .box .text-container h2:hover {
+    color: #fc5b3d;
+  }
+}
+main section.destacado .--container .box .text-container p {
+  font-family: "Alegreya", serif;
+  font-size: 17px;
+  font-weight: none;
+  color: #444;
+  letter-spacing: none;
+  line-height: none;
+  text-transform: none;
+  margin-top: 10px;
+}
+main section.list .--container {
+  width: 95%;
+  max-width: 665px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+@media only screen and (min-width: 1200px) {
+  main section.list .--container {
+    margin-top: 80px;
+  }
+}
+main section.list .--container .box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: none;
+  flex-direction: none;
+  align-items: none;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  max-width: 700px;
+  border-bottom: 1px solid #dfdfdf;
+}
+main section.list .--container .box .--img {
+  width: 25%;
+  padding-top: 25%;
+}
+@media only screen and (min-width: 501px) {
+  main section.list .--container .box .--img {
+    padding-top: 0px;
+    height: 100px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main section.list .--container .box .--img {
+    width: 33%;
+    height: 140px;
+  }
+}
+main section.list .--container .box .text-container {
+  box-sizing: border-box;
+  width: 75%;
+  padding-left: 7px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: none;
+}
+@media only screen and (min-width: 501px) {
+  main section.list .--container .box .text-container {
+    padding-left: 10px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main section.list .--container .box .text-container {
+    width: 66%;
+  }
+}
+main section.list .--container .box .text-container h3 {
+  font-family: "Alegreya", serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #222;
+  letter-spacing: none;
+  line-height: 20px;
+  text-transform: capitalize;
+}
+@media only screen and (min-width: 501px) {
+  main section.list .--container .box .text-container h3 {
+    font-size: 22px;
+  }
+}
+@media only screen and (min-width: 811px) {
+  main section.list .--container .box .text-container h3 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main section.list .--container .box .text-container h3 {
+    font-size: 25px;
+    line-height: 28px;
+    transition: 0.3s;
+  }
+  main section.list .--container .box .text-container h3:hover {
+    color: #fc5b3d;
+  }
+}
+main section.list .--container .box .text-container .date {
+  font-family: "Oswald", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: grey;
+  letter-spacing: none;
+  line-height: none;
+  text-transform: capitalize;
+}
+
+/*# sourceMappingURL=main.css.map */

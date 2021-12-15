@@ -1,0 +1,19 @@
+
+$positions: (
+	l-top: left top, 
+	l-center: left center, 
+	l-bottom: left bottom, 
+	r-top: right top, 
+	r-center: right center, 
+	r-bottom: right bottom, 
+	c-top: center top, 
+	c-center: center center, 
+	c-bottom: center bottom);
+
+@each $key, $p in $positions {
+	.position-#{$key} {
+		background-size: cover;
+		background-position: $p;
+	}
+}
+

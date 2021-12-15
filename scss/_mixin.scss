@@ -1,0 +1,23 @@
+
+@mixin responsive1(){ @media only screen and (min-width: 501px){ @content; } }
+@mixin responsive1b(){ @media only screen and (max-width: 500px){ @content; } }
+@mixin responsive2(){ @media only screen and (min-width: 811px){ @content; } }
+@mixin responsive3(){	@media only screen and (min-width: 1200px){ @content; } }
+
+@mixin flexbox($justify,$direction,$items){
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: $justify;
+	flex-direction: $direction;
+	align-items: $items;
+}
+
+@mixin font-style($font,$size,$weight,$color,$spacing,$height,$transform){
+	font-family: $font;
+	font-size: $size;
+	font-weight: $weight;
+	color: $color;
+	letter-spacing: $spacing;
+	line-height: $height;
+	text-transform: $transform;
+}
