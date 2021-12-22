@@ -23,16 +23,8 @@ lilac: #ebb3eb,
 /*
 	font-family: 'Alegreya', serif;
     font-family: 'Oswald', sans-serif;
+    font-family: 'Anton', sans-serif;
 
-    font-family: 'PT Sans', sans-serif;
-
-    font-family: 'Raleway', sans-serif;
-
-    font-family: 'Ranchers', cursive;
-
-    font-family: 'Roboto Condensed', sans-serif;
-
-    font-family: 'Lato', sans-serif;
 */
 .position-l-top {
   background-size: cover;
@@ -310,7 +302,7 @@ main section.destacado .--container .--title p {
   font-family: "Anton", sans-serif;
   font-size: 26px;
   font-weight: 700;
-  color: #444;
+  color: #393939;
   letter-spacing: none;
   line-height: none;
   text-transform: none;
@@ -346,30 +338,31 @@ main section.destacado .--container .box .text-container {
   flex-direction: none;
   align-items: none;
 }
-@media only screen and (min-width: 811px) {
+@media only screen and (min-width: 501px) {
   main section.destacado .--container .box .text-container {
     border-left: 1px solid #dfdfdf;
     box-sizing: border-box;
     padding-left: 10px;
+    padding-right: 10px;
   }
 }
 main section.destacado .--container .box .text-container .topic {
   font-family: "Oswald", sans-serif;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 500;
-  color: grey;
-  letter-spacing: 1.5px;
+  color: #444;
+  letter-spacing: 0.5px;
   line-height: none;
   text-transform: uppercase;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 main section.destacado .--container .box .text-container h2 {
   font-family: "Oswald", sans-serif;
   font-size: 23px;
   font-weight: 700;
-  color: #222;
+  color: #202124;
   letter-spacing: none;
-  line-height: 25px;
+  line-height: 23px;
   text-transform: capitalize;
   display: inline;
 }
@@ -390,18 +383,20 @@ main section.destacado .--container .box .text-container p {
   letter-spacing: none;
   line-height: none;
   text-transform: none;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 main section.list .--container {
   width: 95%;
   max-width: 665px;
   margin: 0 auto;
-  margin-top: 50px;
 }
 @media only screen and (min-width: 1200px) {
   main section.list .--container {
     margin-top: 80px;
   }
+}
+main section.list .--container:nth-child(1) {
+  border-top: 1px solid #dfdfdf;
 }
 main section.list .--container .box {
   display: flex;
@@ -452,9 +447,9 @@ main section.list .--container .box .text-container {
 }
 main section.list .--container .box .text-container h3 {
   font-family: "Alegreya", serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
-  color: #222;
+  color: #202124;
   letter-spacing: none;
   line-height: 20px;
   text-transform: capitalize;
@@ -482,12 +477,43 @@ main section.list .--container .box .text-container h3 {
 }
 main section.list .--container .box .text-container .date {
   font-family: "Oswald", sans-serif;
-  font-size: 13px;
+  font-size: 9px;
   font-weight: 300;
   color: grey;
   letter-spacing: none;
   line-height: none;
-  text-transform: capitalize;
+  text-transform: uppercase;
+}
+main section.main-article-image .primary-image .main-image {
+  height: 60vh;
+  width: 100%;
+}
+@media only screen and (min-width: 1200px) {
+  main section.main-article-image .primary-image .main-image {
+    height: 600px;
+    width: 1100px;
+  }
+}
+main section.main-article-image .primary-image .img-description {
+  text-align: right;
+  font-family: "Anton", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: darkslategrey;
+  letter-spacing: none;
+  line-height: none;
+  text-transform: none;
+  padding: 2px 10px;
+}
+@media only screen and (min-width: 1200px) {
+  main section.main-article-image .primary-image .img-description {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main section.main-article-image .primary-image {
+    width: 1100px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
