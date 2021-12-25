@@ -48,6 +48,7 @@
   align-items: center;
   padding: 5px 10px;
   width: 100%;
+  height: 50px;
   position: absolute;
   top: 0;
 }
@@ -96,11 +97,89 @@
   .header__btn-nav {
     display: none;
   }
+  .header__mb-nav {
+    display: none;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .header {
     margin-top: 40px;
     margin-bottom: 100px;
+  }
+}
+.principal {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+.principal__box {
+  border-bottom: 4px solid black;
+  box-sizing: border-box;
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.principal__box .--container {
+  padding: 10px 20% 10px 10px;
+  width: 100%;
+}
+.principal__box .--container .tags {
+  display: flex;
+  flex-direction: column;
+  font-family: "Oswald", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: white;
+  letter-spacing: 1.5px;
+}
+.principal__box .--container .tags .date {
+  text-shadow: 2px 2px 15px black;
+}
+.principal__box .--container .tags .theme {
+  font-weight: 500;
+}
+.principal__box .--container .title {
+  font-family: "Oswald", sans-serif;
+  font-size: 27px;
+  font-weight: 600;
+  color: white;
+  line-height: 29px;
+  text-transform: capitalize;
+  text-shadow: 2px 2px 15px black;
+  margin-bottom: 10px;
+}
+.principal .box1 {
+  height: 100vh;
+}
+
+@media only screen and (min-width: 501px) {
+  .principal__box {
+    border: none;
+    width: 98%;
+    max-width: 930px;
+    height: 240px;
+    max-height: 240px;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .principal__box {
+    margin-bottom: 40px;
+  }
+  .principal__box .--container .tags .theme {
+    font-size: 15px;
+    margin-bottom: 3px;
+  }
+  .principal__box .--container .title {
+    font-size: 33px;
+    line-height: 35px;
+    transition: 0.4s;
+    margin-bottom: 0px;
+  }
+  .principal__box .--container .title:hover {
+    color: #fc5b3d;
   }
 }
 html {
@@ -123,114 +202,6 @@ main {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-}
-main section.principal {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: center;
-}
-main section.principal .box {
-  border-bottom: 4px solid black;
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: none;
-  flex-direction: none;
-  align-items: flex-end;
-  height: 50vh;
-  width: 100%;
-}
-@media only screen and (min-width: 501px) {
-  main section.principal .box {
-    border: none;
-    width: 98%;
-    max-width: 930px;
-    height: 240px;
-    max-height: 240px;
-    margin-bottom: 10px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  main section.principal .box {
-    margin-bottom: 40px;
-  }
-}
-main section.principal .box .--container {
-  padding: 10px 20% 10px 10px;
-  width: 100%;
-}
-main section.principal .box .--container .tags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: none;
-  flex-direction: column;
-  align-items: none;
-  font-family: "Oswald", sans-serif;
-  font-size: 13px;
-  font-weight: 300;
-  color: white;
-  letter-spacing: 1.5px;
-  line-height: none;
-  text-transform: none;
-}
-main section.principal .box .--container .tags span.date {
-  font-family: "Oswald", sans-serif;
-  font-size: 11px;
-  font-weight: 300;
-  color: white;
-  letter-spacing: 1.5px;
-  line-height: none;
-  text-transform: none;
-  text-shadow: 2px 2px 15px black;
-}
-main section.principal .box .--container .tags h3 {
-  font-family: "Oswald", sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  color: white;
-  letter-spacing: 1.5px;
-  line-height: none;
-  text-transform: none;
-  text-shadow: 2px 2px 15px black;
-}
-@media only screen and (min-width: 1200px) {
-  main section.principal .box .--container .tags h3 {
-    font-size: 15px;
-    margin-bottom: 3px;
-  }
-}
-main section.principal .box .--container h2 {
-  font-family: "Oswald", sans-serif;
-  font-size: 27px;
-  font-weight: 600;
-  color: whitesmoke;
-  letter-spacing: none;
-  line-height: 29px;
-  text-transform: capitalize;
-  text-shadow: 2px 2px 15px black;
-  margin-bottom: 10px;
-}
-@media only screen and (min-width: 1200px) {
-  main section.principal .box .--container h2 {
-    font-size: 33px;
-    line-height: 35px;
-    transition: 0.4s;
-    margin-bottom: 0px;
-  }
-  main section.principal .box .--container h2:hover {
-    color: #fc5b3d;
-  }
-}
-main section.principal .box1 {
-  height: 100vh;
-}
-@media only screen and (max-width: 500px) {
-  main section.principal .box1 .--container h2 {
-    font-size: 36px;
-    line-height: 36px;
-  }
 }
 main section.destacado .--container {
   margin: 0 auto;
