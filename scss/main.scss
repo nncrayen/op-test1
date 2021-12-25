@@ -1,56 +1,21 @@
-@import '_variables.scss';
-@import '_mixin.scss';
-@import '_classes.scss';
+@import 'variables';
+@import 'mixin';
+@import 'classes';
+@import 'header';
 
-h1, h2, h3, h4, h5, p { margin: 0px; }
-a { text-decoration: none; }
-body { margin: 0 auto; }
-
-header {
-	@include flexbox(space-between,row,center);
-	padding: 5px 10px;
-	box-sizing: border-box;
-	width: 100%;
-	position: absolute;
-	top: 0;
-	@include responsive1() {
-		justify-content: center;
-		margin-top: 10px;
-		margin-bottom: 10px;
-		position: relative;
-	}
-	@include responsive3() {
-		margin-top: 40px;
-		margin-bottom: 100px;
-	}
-	h1 {
-		@include font-style($logo-font,30px,none,$logo-mb,none,none,none);
-		@include responsive1() { color: $logo; }
-	}
-	.top-nav {
-		display: none;
-		padding-left: 30px;
-		@include responsive1(){
-			display: inline;
-			a {
-				margin-right: 30px;	
-				span {
-					@include font-style($top-nav-font,16px,200,#36414d,1.4px,none,lowercase);
-					border-bottom: 1px solid transparent;
-					transition: .3s;
-					&:hover { border-bottom-color: #328cc1;	}
-				}
-			}
-		}
-	}
-	img {
-		width: 30px;
-		border: 3px solid $logo-mb;
-		@include responsive1() {
-			display: none;
-		}
-	}
+html {
+	font-size: 100%;
 }
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+a, a:visited { 
+	text-decoration: none; 
+}
+
 
 main {
 	@include flexbox(center,column,center);
@@ -149,8 +114,8 @@ main {
 					width: 80%;
 					@include flexbox(none,none,none);
 					@include responsive1(){
-						border-left: 1px solid #dfdfdf;
-						box-sizing: border-box;
+						border-left: 1px solid $veryLightGrey;
+						//box-sizing: border-box;
 						padding-left: 10px;
 						padding-right: 10px;
 					}

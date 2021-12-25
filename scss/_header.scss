@@ -1,0 +1,47 @@
+header {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+	padding: 5px 10px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	@include responsive1() {
+		justify-content: center;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		position: relative;
+	}
+	@include responsive3() {
+		margin-top: 40px;
+		margin-bottom: 100px;
+	}
+	.logo {
+		@include fontstyle($logo-font,1.875rem,inherent,$logo-mb);
+		@include responsive1() { color: $logo; }
+	}
+	.desktop_nav {
+		display: none;
+		@include responsive1(){
+		padding-left: 30px;
+		display: inline;
+			a {
+				margin-right: 30px;	
+				span {
+					@include font-style($top-nav-font,16px,200,$darkGrey,1.4px,none,lowercase);
+					border-bottom: 1px solid transparent;
+					transition: .3s;
+					&:hover { border-bottom-color: $softBlue; }
+				}
+			}
+		}
+	}
+	.btn_nav {
+		width: 30px;
+		@include responsive1() {
+			display: none;
+		}
+	}
+}
+

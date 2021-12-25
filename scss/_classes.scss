@@ -5,7 +5,6 @@ $positions: (
 	l-bottom: left bottom, 
 	r-top: right top, 
 	r-center: right center, 
-	r-bottom: right bottom, 
 	c-top: center top, 
 	c-center: center center, 
 	c-bottom: center bottom);
@@ -16,4 +15,7 @@ $positions: (
 		background-position: $p;
 	}
 }
+
+
+
 

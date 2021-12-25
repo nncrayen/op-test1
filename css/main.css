@@ -1,31 +1,7 @@
+@charset "UTF-8";
 /*COLORES*/
-/*FUENTES*/
-/*
-#ffe88e amarillo palido
-#f8725d
-#d00320
-#ede4d5 cafe con leche
-#0b0203 negro elegante
-#202124 negro mas sutil
-#31212d
-#242424
-#333333
-dark-blue: #00214a
-lilac: #ebb3eb,
-	orange: #fc5b3d,
-	electric-light-blue: #3497d9
-	amarillo choro: #eed918
-	verde: 219110
-	rojo : c12929
-	azuloso 25253c
-	rojo hermoso ba 2121
-*/
-/*
-	font-family: 'Alegreya', serif;
-    font-family: 'Oswald', sans-serif;
-    font-family: 'Anton', sans-serif;
-
-*/
+/*Color Fonts*/
+/*TIPOGRAFÍAS*/
 .position-l-top {
   background-size: cover;
   background-position: left top;
@@ -51,11 +27,6 @@ lilac: #ebb3eb,
   background-position: right center;
 }
 
-.position-r-bottom {
-  background-size: cover;
-  background-position: right bottom;
-}
-
 .position-c-top {
   background-size: cover;
   background-position: center top;
@@ -71,26 +42,12 @@ lilac: #ebb3eb,
   background-position: center bottom;
 }
 
-h1, h2, h3, h4, h5, p {
-  margin: 0px;
-}
-
-a {
-  text-decoration: none;
-}
-
-body {
-  margin: 0 auto;
-}
-
 header {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
   padding: 5px 10px;
-  box-sizing: border-box;
   width: 100%;
   position: absolute;
   top: 0;
@@ -109,54 +66,64 @@ header {
     margin-bottom: 100px;
   }
 }
-header h1 {
+header .logo {
   font-family: "Anton", sans-serif;
-  font-size: 30px;
-  font-weight: none;
+  font-size: 1.875rem;
+  font-weight: inherent;
   color: #ba2121;
-  letter-spacing: none;
-  line-height: none;
-  text-transform: none;
 }
 @media only screen and (min-width: 501px) {
-  header h1 {
-    color: #393939;
+  header .logo {
+    color: #242424;
   }
 }
-header .top-nav {
+header .desktop_nav {
   display: none;
-  padding-left: 30px;
 }
 @media only screen and (min-width: 501px) {
-  header .top-nav {
+  header .desktop_nav {
+    padding-left: 30px;
     display: inline;
   }
-  header .top-nav a {
+  header .desktop_nav a {
     margin-right: 30px;
   }
-  header .top-nav a span {
+  header .desktop_nav a span {
     font-family: "Oswald", sans-serif;
     font-size: 16px;
     font-weight: 200;
-    color: #36414d;
+    color: #242424;
     letter-spacing: 1.4px;
     line-height: none;
     text-transform: lowercase;
     border-bottom: 1px solid transparent;
     transition: 0.3s;
   }
-  header .top-nav a span:hover {
+  header .desktop_nav a span:hover {
     border-bottom-color: #328cc1;
   }
 }
-header img {
+header .btn_nav {
   width: 30px;
-  border: 3px solid #ba2121;
 }
 @media only screen and (min-width: 501px) {
-  header img {
+  header .btn_nav {
     display: none;
   }
+}
+
+html {
+  font-size: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
 }
 
 main {
@@ -341,7 +308,6 @@ main section.destacado .--container .box .text-container {
 @media only screen and (min-width: 501px) {
   main section.destacado .--container .box .text-container {
     border-left: 1px solid #dfdfdf;
-    box-sizing: border-box;
     padding-left: 10px;
     padding-right: 10px;
   }

@@ -1,45 +1,25 @@
 /*COLORES*/
-	// Página principal
-	$logo-mb: #ba2121;
-	$logo: #393939;
-	$title-hover: #fc5b3d;
-	// Post
+	$orange: #fc5b3d;
+	$softBlue: #328cc1;
+	$lightElectricBlue: #3497d9;
+	$darkBlue: #393939;
+	$veryLightGrey: #dfdfdf;
+	$generalBlack: #0b0203;
+	$darkGrey: #242424;
+	$strongRed: #ba2121;
+	$darkRed: #d00320;
+	$lightYellow: #ffe88e;
+	$lightCoffee: #ede4d5;
 
-/*FUENTES*/
-	// Página principal
+/*Color Fonts*/
+	$logo-mb: $strongRed;
+	$logo: $darkGrey;
+	$title-hover: $orange;
 
-
-/*
-#ffe88e amarillo palido
-#f8725d
-#d00320
-#ede4d5 cafe con leche
-#0b0203 negro elegante
-#202124 negro mas sutil
-#31212d
-#242424
-#333333
-dark-blue: #00214a
-lilac: #ebb3eb,
-	orange: #fc5b3d,
-	electric-light-blue: #3497d9
-	amarillo choro: #eed918
-	verde: 219110
-	rojo : c12929
-	azuloso 25253c
-	rojo hermoso ba 2121
-*/
-
+/*TIPOGRAFÍAS*/
 $logo-font: 'Anton', sans-serif;
 $title-font: 'Oswald', sans-serif;
 $top-nav-font: 'Oswald', sans-serif;
 $tags: 'Oswald', sans-serif;
 $text: 'Alegreya', serif;
 $lo-mas:'Anton', sans-serif;
-
-/*
-	font-family: 'Alegreya', serif;
-    font-family: 'Oswald', sans-serif;
-    font-family: 'Anton', sans-serif;
-
-*/
