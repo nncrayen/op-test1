@@ -3,18 +3,13 @@
 @import 'classes';
 @import 'header';
 
-html {
-	font-size: 100%;
-}
-
+html { font-size: 100%; }
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
-a, a:visited { 
-	text-decoration: none; 
-}
+a, a:visited { text-decoration: none; }
 
 
 main {

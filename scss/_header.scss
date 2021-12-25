@@ -1,47 +1,45 @@
-header {
+.header {
 	display: flex;
 	justify-content: space-between;
-	flex-direction: row;
 	align-items: center;
 	padding: 5px 10px;
 	width: 100%;
 	position: absolute;
 	top: 0;
-	@include responsive1() {
+	&__logo { @include fontstyle($logo-font,1.875rem,inherent,$logo-mb); }
+	&__desktop-nav { display: none;	}
+	&__btn-nav { width: 30px; }
+}
+
+@include responsive1(){
+	.header {
 		justify-content: center;
 		margin-top: 10px;
 		margin-bottom: 10px;
-		position: relative;
-	}
-	@include responsive3() {
-		margin-top: 40px;
-		margin-bottom: 100px;
-	}
-	.logo {
-		@include fontstyle($logo-font,1.875rem,inherent,$logo-mb);
-		@include responsive1() { color: $logo; }
-	}
-	.desktop_nav {
-		display: none;
-		@include responsive1(){
-		padding-left: 30px;
-		display: inline;
+		position: relative;	
+		&__logo { color: $logo;	}
+		&__desktop-nav {
+			padding-left: 30px;
+			display: inline;
 			a {
 				margin-right: 30px;	
 				span {
-					@include font-style($top-nav-font,16px,200,$darkGrey,1.4px,none,lowercase);
+					@include fontstyle($top-nav-font,16px,200,$darkGrey);
+					letter-spacing: 1.4px;
 					border-bottom: 1px solid transparent;
 					transition: .3s;
 					&:hover { border-bottom-color: $softBlue; }
 				}
 			}
 		}
+		&__btn-nav { display: none;	}
 	}
-	.btn_nav {
-		width: 30px;
-		@include responsive1() {
-			display: none;
-		}
+}
+
+@include responsive3(){
+	.header {
+		margin-top: 40px;
+		margin-bottom: 100px;
 	}
 }
 
