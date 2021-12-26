@@ -1,4 +1,5 @@
 
+/*SECCIÓN PRINCIPAL*/
 .principal {
 	display: flex;
 	justify-content: flex-start;
@@ -36,6 +37,56 @@
 	}
 }
 
+/*SECCIÓN POPULARES*/
+.popular {
+	&__container {
+		margin: 0 auto;
+		width: 90%;
+		max-width: 930px;
+		margin-top: 50px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.--title {
+		width: 80%;
+		//background-color: yellow;
+		@include fontstyle($lo-mas,26px,700,$generalBlack);
+	}
+	.box {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 50px;
+		.--img {
+			width: 80%;
+			height: 200px;
+			margin-bottom: 10px;
+		}
+		.text-container {
+			width: 80%;
+			display: flex;
+			flex-wrap: wrap;
+			.topic {
+				@include fontstyle($tags,10px,500,$darkGrey);
+				letter-spacing: .5px;
+				margin-bottom: 3px;
+			}
+			h2 {
+				@include fontstyle($tags,23px,700,#202124);
+				line-height: 23px;
+				text-transform: capitalize;
+				display: inline;
+			}
+			p {
+				@include fontstyle($text,17px,normal,#444);
+				margin-top: 8px;
+			}
+		}
+	}
+}
+
+
 @include responsive1(){
 	.principal {
 		&__box {
@@ -45,6 +96,31 @@
 			height: 240px;
 			max-height: 240px;
 			margin-bottom: 10px;
+		}
+	}
+	.popular {
+		&__container {
+			width: 98%;
+			.box {
+				width: 50%;
+				.text-container {
+					border-left: 1px solid $veryLightGrey;
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+			}
+		}
+	}
+}
+
+@include responsive2(){
+	.popular {
+		&__container {
+			.box {
+				.--img {
+					height: 240px;
+				}
+			}
 		}
 	}
 }
@@ -66,6 +142,20 @@
 					transition: .4s;
 					margin-bottom: 0px;
 					&:hover { color: $title-hover; }
+				}
+			}
+		}
+	}
+	.popular {
+		&__container {
+			margin-top: 100px;
+			.box {
+				.text-container {
+					h2 {
+						line-height: 30px;
+						transition: .3s;
+						&:hover { color: $title-hover; }
+					}
 				}
 			}
 		}

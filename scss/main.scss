@@ -16,61 +16,6 @@ a, a:visited { text-decoration: none; }
 main {
 	@include flexbox(center,column,center);
 
-
-	section.destacado {
-		.--container {
-			margin: 0 auto;
-			width: 90%;
-			max-width: 930px;
-			margin-top: 50px;
-			@include flexbox(none,none,none);
-			@include responsive1(){ width: 98%;	}
-			@include responsive3(){ margin-top: 100px; }
-			.--title {
-				width: 80%;
-				p { @include font-style($lo-mas,26px,700,#393939,none,none,none); }
-			}
-			.box {
-				@include flexbox(none,column,center);
-				margin-bottom: 50px;
-				@include responsive1(){ width: 50%;	}
-				.--img {
-					width: 80%;
-					height: 200px;
-					margin-bottom: 10px;
-					@include responsive2(){ height: 240px; }
-				}
-				.text-container {
-					width: 80%;
-					@include flexbox(none,none,none);
-					@include responsive1(){
-						border-left: 1px solid $veryLightGrey;
-						//box-sizing: border-box;
-						padding-left: 10px;
-						padding-right: 10px;
-					}
-					.topic {
-						@include font-style($tags,10px,500,#444,.5px,none,uppercase);
-						margin-bottom: 3px;
-					}
-					h2 {
-						@include font-style($tags,23px,700,#202124,none,23px,capitalize);
-						display: inline;
-						@include responsive3(){
-							line-height: 30px;
-							transition: .3s;
-							&:hover { color: $title-hover; }
-						}
-					}
-					p {
-						@include font-style($text,17px,none,#444,none,none,none);
-						margin-top: 8px;
-					}
-				}
-			}
-		}
-	}
-
 	section.list {
 		.--container {
 			width: 95%;
