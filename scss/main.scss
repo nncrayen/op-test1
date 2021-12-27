@@ -14,78 +14,9 @@ a, a:visited { text-decoration: none; }
 
 
 main {
-	@include flexbox(center,column,center);
-
-	section.list {
-		.--container {
-			width: 95%;
-			max-width: 665px;
-			margin: 0 auto;
-			@include responsive3(){ margin-top: 80px; }
-			&:nth-child(1){ border-top: 1px solid #dfdfdf; }
-			.box {
-				@include flexbox(none,none,none);
-				padding-bottom: 15px;
-				padding-top: 15px;
-				max-width: 700px;
-				border-bottom: 1px solid #dfdfdf;
-				.--img {
-					width: 25%;
-					padding-top: 25%;
-					@include responsive1(){
-						padding-top: 0px;
-						height: 100px;
-					}
-					@include responsive3(){
-						width: 33%;
-						height: 140px;
-					}
-				}
-				.text-container {
-					box-sizing: border-box;
-					width: 75%;
-					padding-left: 7px;
-					@include flexbox(space-between,column,none);
-					@include responsive1(){ padding-left: 10px; }
-					@include responsive3(){ width: 66%;	}
-					h3 {
-						@include font-style($text,16px,400,#202124,none,20px,capitalize);
-						@include responsive1(){ font-size: 22px; }
-						@include responsive2(){
-							font-size: 24px;
-							line-height: 24px;
-						}
-						@include responsive3(){
-							font-size: 25px;
-							line-height: 28px;
-							transition: .3s;
-							&:hover { color: $title-hover; }
-						}
-					}
-					.date { @include font-style($top-nav-font,9px,300,grey,none,none,uppercase); }
-				}
-			}
-		}
-	}
-
-	section.main-article-image {
-		.primary-image {
-			.main-image {
-				height: 60vh;
-				width: 100%;
-				@include responsive3(){ 
-					height: 600px;
-					width: 1100px;
-				}
-			}
-			.img-description {
-				text-align: right;
-				@include font-style($logo-font,12px,300,darkslategrey,none,none,none);
-				padding: 2px 10px;
-				@include responsive3(){ font-size: 16px; }
-			}	
-			@include responsive3(){ width: 1100px; }
-		}
-	}
-
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 }

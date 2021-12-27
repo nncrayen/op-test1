@@ -4,26 +4,9 @@
 @mixin responsive2(){ @media only screen and (min-width: 811px){ @content; } }
 @mixin responsive3(){	@media only screen and (min-width: 1200px){ @content; } }
 
-@mixin flexbox($justify,$direction,$items){
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: $justify;
-	flex-direction: $direction;
-	align-items: $items;
-}
-
 @mixin fontstyle($font,$size,$weight,$color){
 	font-family: $font;
 	font-size: $size;
 	font-weight: $weight;
 	color: $color;
-}
-@mixin font-style($font,$size,$weight,$color,$spacing,$height,$transform){
-	font-family: $font;
-	font-size: $size;
-	font-weight: $weight;
-	color: $color;
-	letter-spacing: $spacing;
-	line-height: $height;
-	text-transform: $transform;
 }
