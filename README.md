@@ -1,2 +1,2 @@
 # op-test1
-Este es el primer proyecto de maqueta op
+Maketa op 1

@@ -3,6 +3,7 @@
 @import 'classes';
 @import 'header';
 @import 'landing';
+@import 'post';
 
 html { font-size: 100%; }
 * {
@@ -11,11 +12,8 @@ html { font-size: 100%; }
 	padding: 0;
 }
 a, a:visited { text-decoration: none; }
-
-
 main {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;

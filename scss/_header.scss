@@ -9,7 +9,6 @@
 	top: 0;
 	&__logo { @include fontstyle($logo-font,1.875rem,inherent,$logo-mb); }
 	&__desktop-nav { display: none;	}
-	&__btn-nav { width: 30px; }
 }
 
 @include responsive1(){
@@ -33,8 +32,6 @@
 				}
 			}
 		}
-		&__btn-nav { display: none;	}
-		&__mb-nav { display: none; }
 	}
 }
 
