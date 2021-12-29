@@ -4,52 +4,38 @@ MOBILE FIRST ******************
 **********************/
 /*SECCIÓN PRINCIPAL*/
 .principal {
-	display: flex;
-	justify-content: flex-start;
-	flex-direction: column;
-	align-items: center;
 	&__box {
 		border-bottom: 4px solid black;
-		box-sizing: border-box;
-		height: 50vh;
+		height: 60vh;
 		width: 100%;
 		display: flex;
 		align-items: flex-end;
 		.--container {
-			padding: 10px 20% 10px 10px;
-			width: 100%;
+			padding: 10px 20% 20px 10px;
 			.tags {
 				display: flex;
 				flex-direction: column;
 				letter-spacing: 1.5px;
-				.date { 
-					@include fontstyle($tags,13px,300,white);
-					text-shadow: 2px 2px 15px black; 
-				}
-				.theme { 
-					@include fontstyle($tags,14px,400,white);
-					text-shadow: 2px 2px 15px black; 
-				}
+				text-shadow: 2px 2px 10px black; 
+				@include fontstyle($tags,11px,400,white);
+				.theme { font-size: 14px; }
 			}
 			.title {
 				@include fontstyle($title-font,27px,600,white);
 				line-height: 29px;
 				text-transform: capitalize;
-				text-shadow: 2px 2px 15px black;
-				margin-bottom: 10px;
+				text-shadow: 2px 2px 10px black;
 			}
 		}
 	}
 	&__box:first-child {
 		height: 100vh;
 		.--container {
-			.title {
-				font-size: 31px;
-			}
+			.title { font-size: 31px; }
 		}
 	}
 }
-/*SECCIÓN POPULARES*/
+/*SECCIÓN POPULARES
 .popular {
 	&__container {
 		margin: 0 auto;
@@ -94,37 +80,41 @@ MOBILE FIRST ******************
 		}
 	}
 }
+*/
 /*SECCIÓN LISTA/ENTRADAS*/
 .list {
 	&__container {
-		width: 95%;
+		//width: 95%;
+		width: 100%;
 		max-width: 665px;
 		margin: 0 auto;
-		&:nth-child(1){ border-top: 1px solid #dfdfdf; }
+		//&:nth-child(1){ border-top: 1px solid #dfdfdf; }
 		.box {
 			display: flex;
 			flex-wrap: wrap;
-			padding-bottom: 15px;
-			padding-top: 15px;
+			//padding-bottom: 15px;
+			//padding-top: 15px;
 			max-width: 700px;
-			border-bottom: 1px solid #dfdfdf;
+			border-bottom: 1px solid $veryLightGrey;
 			.--img {
-				width: 25%;
-				padding-top: 25%;
+				//width: 25%;
+				width: 50%;
+				//padding-top: 25%;
 			}
 			.text-container {
-				width: 75%;
-				padding-left: 7px;
+				//width: 75%;
+				width: 50%;
+				padding: 15px;
 				display: flex;
 				flex-direction: column;
 				.topic {
-					@include fontstyle($top-nav-font,11px,300,$softBlue);
+					@include fontstyle($top-nav-font,11px,300,$darkRed);
 					letter-spacing: .5px;
 				}
 				.title {
-					@include fontstyle($text,16px,400,#202124);
-					line-height: 20px;
-					text-transform: capitalize;
+					@include fontstyle($title-font,18px,400,$darkBlue);
+					line-height: 24px;
+					//text-transform: capitalize;
 				}
 				.date {
 					@include fontstyle($top-nav-font,9px,300,grey);
@@ -137,13 +127,19 @@ MOBILE FIRST ******************
 
 @include responsive1(){
 	.principal {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		&__box {
-			border: none;
+			border-bottom: none;
 			width: 98%;
 			max-width: 930px;
 			height: 240px;
 			max-height: 240px;
 			margin-bottom: 10px;
+			.--container {
+				padding-bottom: 10px;
+			}
 		}
 	}
 	.popular {
@@ -154,7 +150,7 @@ MOBILE FIRST ******************
 				flex-wrap: wrap;
 				justify-content: space-between;
 				.box {
-					width: 32%;
+					width: 49%;
 					.text-container {
 						border-left: 1px solid $veryLightGrey;
 						padding-left: 10px;
