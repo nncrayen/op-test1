@@ -80,14 +80,16 @@ MOBILE FIRST ******************
 			height: 240px;
 			max-height: 240px;
 			margin-bottom: 10px;
-			.--container {
-				padding-bottom: 10px;
-			}
+			.--container { padding-bottom: 10px; }
+		}
+		&__box:first-child {
+			height: 360px;
+			max-height: 360px;
 		}
 	}
 	
 	.list {
-		margin-top: 10px;
+		margin-top: 30px;
 		&__container {
 			margin: 0 auto;
 			width: 95%;
@@ -125,13 +127,29 @@ MOBILE FIRST ******************
 					}
 				}
 			}
+			.box:first-child { border-top: 1px solid $veryLightGrey; }
 		}
 	}
 }
 
 @include responsive3(){
 	.principal {
+		.box1 {
+			.second-image {
+				width: 930px;
+				height: 360px;
+				transition: 1s;
+				position: absolute;
+				opacity: 0;
+			}
+			.--container { position: relative; }
+		}
+		.box1:hover {
+			.second-image { opacity: 1; }
+		}
+		
 		&__box {
+			width: 100%;
 			margin-bottom: 40px;
 			.--container {
 				.tags {
@@ -152,8 +170,8 @@ MOBILE FIRST ******************
 	}
 	
 	.list {
+		margin-top: 80px;
 		&__container {
-			margin-top: 80px;
 			.box {
 				padding-bottom: 15px;
 				padding-top: 15px;

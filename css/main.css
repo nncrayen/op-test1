@@ -44,7 +44,6 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 5px 10px;
   width: 100%;
@@ -55,8 +54,16 @@
 .header__logo {
   font-family: "Anton", sans-serif;
   font-size: 1.875rem;
-  font-weight: inherent;
+  font-weight: bold;
   color: #ba2121;
+}
+.header__descript {
+  display: none;
+  font-family: "Anton", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #242424;
+  padding-left: 2px;
 }
 .header__desktop-nav {
   display: none;
@@ -92,8 +99,8 @@
 }
 @media only screen and (min-width: 1200px) {
   .header {
-    margin-top: 40px;
     margin-bottom: 100px;
+    margin-top: 40px;
   }
 }
 /******************
@@ -194,9 +201,13 @@ MOBILE FIRST ******************
   .principal__box .--container {
     padding-bottom: 10px;
   }
+  .principal__box:first-child {
+    height: 360px;
+    max-height: 360px;
+  }
 
   .list {
-    margin-top: 10px;
+    margin-top: 30px;
   }
   .list__container {
     margin: 0 auto;
@@ -232,9 +243,26 @@ MOBILE FIRST ******************
     font-size: 24px;
     line-height: 24px;
   }
+  .list__container .box:first-child {
+    border-top: 1px solid #dfdfdf;
+  }
 }
 @media only screen and (min-width: 1200px) {
+  .principal .box1 .second-image {
+    width: 930px;
+    height: 360px;
+    transition: 1s;
+    position: absolute;
+    opacity: 0;
+  }
+  .principal .box1 .--container {
+    position: relative;
+  }
+  .principal .box1:hover .second-image {
+    opacity: 1;
+  }
   .principal__box {
+    width: 100%;
     margin-bottom: 40px;
   }
   .principal__box .--container .tags .theme {
@@ -251,7 +279,7 @@ MOBILE FIRST ******************
     color: #fc5b3d;
   }
 
-  .list__container {
+  .list {
     margin-top: 80px;
   }
   .list__container .box {
@@ -280,17 +308,17 @@ MOBILE FIRST ******************
 }
 .header-post__container .--main-img {
   width: 100%;
-  height: 50vh;
+  height: 60vh;
 }
 .header-post__container .descript {
   font-family: "Oswald", sans-serif;
   font-size: 12px;
   font-weight: 300;
-  color: #0b0203;
+  color: grey;
   text-align: right;
-  padding-right: 13px;
+  padding-right: 10px;
   margin-left: 13px;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid #dfdfdf;
 }
 
 .info-post__container {
