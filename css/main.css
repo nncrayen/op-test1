@@ -78,8 +78,6 @@
   }
   .header__desktop-nav a {
     margin-right: 30px;
-  }
-  .header__desktop-nav a span {
     font-family: "Oswald", sans-serif;
     font-size: 16px;
     font-weight: 200;
@@ -88,7 +86,7 @@
     border-bottom: 1px solid transparent;
     transition: 0.3s;
   }
-  .header__desktop-nav a span:hover {
+  .header__desktop-nav a:hover {
     border-bottom-color: #328cc1;
   }
 }
@@ -141,86 +139,36 @@ MOBILE FIRST ******************
   font-size: 31px;
 }
 
-/*SECCIÓN POPULARES
-.popular {
-	&__container {
-		margin: 0 auto;
-		width: 80%;
-		max-width: 930px;
-		margin-top: 50px;
-		.box-title {
-			@include fontstyle($lo-mas,26px,700,$generalBlack);
-			border-bottom: 1px solid $veryLightGrey;
-			width: 100%;
-			margin-bottom: 10px;
-		}
-		.box-container {
-			.box {
-				margin-bottom: 50px;
-				.--img {
-					width: 100%;
-					height: 200px;
-					margin-bottom: 10px;
-				}
-				.text-container {
-					display: flex;
-					flex-wrap: wrap;
-					.topic {
-						@include fontstyle($tags,10px,500,$darkGrey);
-						letter-spacing: .5px;
-						margin-bottom: 3px;
-						text-transform: uppercase;
-					}
-					.title {
-						@include fontstyle($tags,23px,700,#202124);
-						line-height: 23px;
-						text-transform: capitalize;
-						display: inline;
-					}
-					.parrafo {
-						@include fontstyle($text,17px,normal,#444);
-						margin-top: 8px;
-					}
-				}
-			}
-		}
-	}
-}
-*/
 /*SECCIÓN LISTA/ENTRADAS*/
-.list__container {
-  width: 100%;
-  max-width: 665px;
-  margin: 0 auto;
-}
 .list__container .box {
   display: flex;
   flex-wrap: wrap;
-  max-width: 700px;
   border-bottom: 1px solid #dfdfdf;
 }
 .list__container .box .--img {
-  width: 50%;
+  width: 48%;
 }
 .list__container .box .text-container {
-  width: 50%;
+  width: 52%;
   padding: 15px;
   display: flex;
   flex-direction: column;
 }
 .list__container .box .text-container .topic {
   font-family: "Oswald", sans-serif;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 300;
-  color: #d00320;
+  color: #328cc1;
   letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 .list__container .box .text-container .title {
   font-family: "Oswald", sans-serif;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
   color: #393939;
   line-height: 24px;
+  margin-bottom: 5px;
 }
 .list__container .box .text-container .date {
   font-family: "Oswald", sans-serif;
@@ -247,39 +195,39 @@ MOBILE FIRST ******************
     padding-bottom: 10px;
   }
 
-  .popular__container {
-    width: 98%;
+  .list {
+    margin-top: 10px;
   }
-  .popular__container .box-container {
-    display: flex;
-    flex-wrap: wrap;
+  .list__container {
+    margin: 0 auto;
+    width: 95%;
+    max-width: 665px;
+  }
+  .list__container .box {
+    flex-direction: row-reverse;
     justify-content: space-between;
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
-  .popular__container .box-container .box {
-    width: 49%;
-  }
-  .popular__container .box-container .box .text-container {
-    border-left: 1px solid #dfdfdf;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
   .list__container .box .--img {
-    padding-top: 0px;
-    height: 100px;
+    height: 150px;
+    width: 40%;
   }
   .list__container .box .text-container {
-    padding-left: 10px;
+    width: 60%;
+    padding: 0px 10px;
+  }
+  .list__container .box .text-container .topic {
+    font-size: 12px;
   }
   .list__container .box .text-container .title {
     font-size: 22px;
   }
+  .list__container .box .text-container .date {
+    font-size: 10px;
+  }
 }
 @media only screen and (min-width: 811px) {
-  .popular__container .box .--img {
-    height: 240px;
-  }
-
   .list__container .box .text-container .title {
     font-size: 24px;
     line-height: 24px;
@@ -303,34 +251,24 @@ MOBILE FIRST ******************
     color: #fc5b3d;
   }
 
-  .popular__container {
-    margin-top: 100px;
-  }
-  .popular__container .box-container .box .text-container .topic {
-    font-size: 12px;
-    color: #d00320;
-  }
-  .popular__container .box-container .box .text-container .title {
-    line-height: 30px;
-    transition: 0.3s;
-  }
-  .popular__container .box-container .box .text-container .title:hover {
-    color: #fc5b3d;
-  }
-
   .list__container {
     margin-top: 80px;
   }
-  .list__container .box .--img {
-    width: 33%;
-    height: 140px;
+  .list__container .box {
+    padding-bottom: 15px;
+    padding-top: 15px;
   }
-  .list__container .box .text-container {
-    width: 66%;
+  .list__container .box .--img {
+    height: 170px;
+  }
+  .list__container .box .text-container .topic {
+    font-weight: 400;
+    letter-spacing: 1px;
   }
   .list__container .box .text-container .title {
-    font-size: 23px;
+    font-size: 25px;
     line-height: 28px;
+    margin-bottom: 10px;
     transition: 0.3s;
   }
   .list__container .box .text-container .title:hover {

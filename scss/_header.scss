@@ -23,13 +23,11 @@
 			display: inline;
 			a {
 				margin-right: 30px;	
-				span {
-					@include fontstyle($top-nav-font,16px,200,$darkGrey);
-					letter-spacing: 1.4px;
-					border-bottom: 1px solid transparent;
-					transition: .3s;
-					&:hover { border-bottom-color: $softBlue; }
-				}
+				@include fontstyle($top-nav-font,16px,200,$darkGrey);
+				letter-spacing: 1.4px;
+				border-bottom: 1px solid transparent;
+				transition: .3s;
+				&:hover { border-bottom-color: $softBlue; }	
 			}
 		}
 	}
