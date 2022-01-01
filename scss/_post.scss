@@ -1,5 +1,5 @@
 
-.header-post {
+.main-image-post {
 	&__container {
 		.--main-img {
 			width: 100%;
@@ -17,35 +17,60 @@
 
 .info-post {
 	&__container {
-		padding: 13px;
-		.theme {
-			@include fontstyle($top-nav-font,12px,300,$softBlue);
-			text-transform: uppercase;
-			margin-top: 10px;
-		}
+		padding-left: 13px;
+		padding-right: 13px;
+		padding-top: 20px;
 		.title {
 			@include fontstyle($title-font,27px,600,$darkGrey);
 			line-height: 33px;
 			margin-top: 5px;
-			margin-bottom: 15px;
 			text-transform: capitalize;
 		}
-		.info {
-			@include fontstyle($top-nav-font,12px,300,$darkRed);
-			text-transform: uppercase;
+		.categories {
+			@include fontstyle($top-nav-font,15px,400,$darkGrey);
+			letter-spacing: .7px;
+			border-bottom: 1px solid $veryLightGrey;
+			display: inline-block;
+			margin-bottom: 30px;
+			.theme { color: $softBlue; }
+			.date {
+				color: grey;
+				font-weight: 300;
+				font-size: 13px;
+			}
 		}
-		.date {
-			@include fontstyle($title-font,13px,300,$darkGrey);
+		.ajustes {
+			display: flex;
+			justify-content: flex-end;
+			.icon-text {
+				border: 1px solid $darkGrey;
+				//background-color: grey;
+				border-radius: 100%;
+				padding: 7px;
+					img {
+					width: 15px;
+					height: 15px;
+				}
+			}
+			
 		}
+		
 	}
 }
 
 .text-post {
 	&__container {
-		padding: 13px;
+		padding-left: 13px;
+		padding-right: 13px;
 		p {
+
 			@include fontstyle($text,18px,normal,$darkGrey);
 			margin-bottom: 15px;
+		}
+		p:first-child::first-letter {
+			color: $darkRed;
+			font-size: 25px;
+			font-family: $title-font;
 		}
 	}
 }
