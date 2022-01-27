@@ -23,9 +23,9 @@ MOBILE FIRST ******************
 			.title {
 				@include fontstyle($title-font,27px,600,white);
 				line-height: 29px;
-				text-transform: capitalize;
 				text-shadow: 2px 2px 10px black;
 			}
+			
 		}
 	}
 	&__box:first-child {
@@ -73,14 +73,20 @@ MOBILE FIRST ******************
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		width: 90%;
 		&__box {
 			border-bottom: none;
-			width: 98%;
-			max-width: 930px;
+			max-width: 830px;
 			height: 240px;
 			max-height: 240px;
-			margin-bottom: 10px;
-			.--container { padding-bottom: 10px; }
+			margin-bottom: 20px;
+			.--container { 
+				padding-bottom: 10px; 
+				.title {
+					font-size: 25px;
+					font-weight: 500;
+				}
+			}
 		}
 		&__box:first-child {
 			height: 360px;
@@ -90,9 +96,9 @@ MOBILE FIRST ******************
 	
 	.list {
 		margin-top: 30px;
+		width: 80%;
 		&__container {
 			margin: 0 auto;
-			width: 95%;
 			max-width: 665px;
 			.box {
 				flex-direction: row-reverse;
@@ -100,14 +106,14 @@ MOBILE FIRST ******************
 				padding-bottom: 10px;
 				padding-top: 10px;
 				.--img { 
-					height: 150px; 
+					height: 140px; 
 					width: 40%;
 				}
 				.text-container {
 					width: 60%;
 					padding: 0px 10px;
 					.topic { font-size: 12px; }
-					.title { font-size: 22px; }
+					.title { font-size: 21px; }
 					.date { font-size: 10px; }
 				}
 			}
@@ -133,25 +139,12 @@ MOBILE FIRST ******************
 }
 
 @include responsive3(){
-	.principal {
-		.box1 {
-			.second-image {
-				width: 930px;
-				height: 360px;
-				transition: 1s;
-				position: absolute;
-				opacity: 0;
-			}
-			.--container { position: relative; }
-		}
-		.box1:hover {
-			.second-image { opacity: 1; }
-		}
-		
+	.principal {		
 		&__box {
 			width: 100%;
 			margin-bottom: 40px;
 			.--container {
+				padding-right: 30%;
 				.tags {
 					.theme {
 						font-size: 15px;
@@ -159,11 +152,23 @@ MOBILE FIRST ******************
 					}
 				}
 				.title {
-					font-size: 31px;
-					line-height: 37px;
-					transition: .4s;
-					margin-bottom: 0px;
-					&:hover { color: $title-hover; }
+					font-size: 30px;
+					transition: .1s;
+					&:hover {
+						//color:$lightYellow;
+
+					}
+				}
+			}
+		}
+		&__box:first-child {
+			height: 400px;
+			max-height: 400px;
+			.--container {
+				.title {
+					font-size: 40px;
+					line-height: 38px;
+					font-weight: 600;
 				}
 			}
 		}
@@ -182,10 +187,11 @@ MOBILE FIRST ******************
 						letter-spacing: 1px;
 					}
 					.title {
-						font-size: 25px;
+						font-weight: 400;
+						font-size: 24px;
 						line-height: 28px;
 						margin-bottom: 10px;
-						transition: .3s;
+						//transition: .3s;
 						&:hover { color: $title-hover; }
 					}
 					.date { font-size: 12px; }

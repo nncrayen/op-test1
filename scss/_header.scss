@@ -7,19 +7,14 @@
 	position: absolute;
 	top: 0;
 	&__logo { @include fontstyle($logo-font,1.875rem,bold,$logo-mb); }
-	&__descript {
-		display: none;
-		@include fontstyle($logo-font,14px,normal,$darkGrey);
-		padding-left: 2px;
-	}
 	&__desktop-nav { display: none;	}
 }
 
 @include responsive1(){
 	.header {
 		justify-content: center;
-		margin-top: 10px;
-		margin-bottom: 10px;
+		margin-top: 15vh;
+		height: 100%;
 		position: relative;	
 		&__logo { color: $logo;	}
 		&__desktop-nav {
@@ -38,9 +33,6 @@
 }
 
 @include responsive3(){
-	.header { 
-		margin-bottom: 100px; 
-		margin-top: 40px;
-	}
+	.header { margin-bottom: 10px; }
 }
 
