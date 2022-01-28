@@ -7,17 +7,24 @@
 	position: absolute;
 	top: 0;
 	&__logo { @include fontstyle($logo-font,1.875rem,bold,$logo-mb); }
-	&__desktop-nav { display: none;	}
+	&__descript { display: none; }
+	//&__desktop-nav { display: none; }
 }
 
 @include responsive1(){
 	.header {
 		justify-content: center;
-		margin-top: 15vh;
+		margin-top: 10vh;
 		height: 100%;
 		position: relative;	
 		&__logo { color: $logo;	}
-		&__desktop-nav {
+		&__descript {
+			display: inline;
+			@include fontstyle($top-nav-font,15px,200,$logo);
+			letter-spacing: 1.4px;
+			padding-left: 5px;
+		}
+		/*&__desktop-nav {
 			padding-left: 30px;
 			display: inline;
 			a {
@@ -28,7 +35,7 @@
 				transition: .3s;
 				&:hover { border-bottom-color: $softBlue; }	
 			}
-		}
+		}*/
 	}
 }
 
