@@ -8,62 +8,33 @@
 	}
 }
 
-.info-post {
+.mainTitle {
 	&__container {
-		padding-left: 13px;
-		padding-right: 13px;
-		padding-top: 20px;
+		padding: 13px;
+		margin-bottom: 20px;
+		.info {
+			@include fontstyle($top-nav-font,15px,400,$darkGrey);
+			letter-spacing: .7px;
+			.categ { color: $darkRed; }
+			.theme { color: $softBlue; }
+		}
 		.title {
 			@include fontstyle($title-font,27px,600,$darkGrey);
 			line-height: 33px;
 			margin-top: 5px;
-			text-transform: capitalize;
 		}
-		.categories {
-			@include fontstyle($top-nav-font,15px,400,$darkGrey);
-			letter-spacing: .7px;
-			border-bottom: 1px solid $veryLightGrey;
-			display: inline-block;
-			margin-bottom: 30px;
-			.theme { color: $softBlue; }
-			.date {
-				color: grey;
-				font-weight: 300;
-				font-size: 13px;
-			}
-		}
-		.ajustes {
-			display: flex;
-			justify-content: flex-end;
-			.icon-text {
-				border: 1px solid $darkGrey;
-				//background-color: grey;
-				border-radius: 100%;
-				padding: 7px;
-					img {
-					width: 15px;
-					height: 15px;
-				}
-			}
-			
-		}
-		
 	}
 }
 
-.text-post {
+.mainText {
 	&__container {
-		padding-left: 13px;
-		padding-right: 13px;
+		padding: 13px;
 		p {
-
 			@include fontstyle($text,18px,normal,$darkGrey);
-			margin-bottom: 15px;
+			margin-bottom: 20px;
 		}
 		p:first-child::first-letter {
-			color: $darkRed;
-			font-size: 25px;
-			font-family: $title-font;
+			@include fontstyle($title-font,25px,500,$darkRed);
 		}
 	}
 }
@@ -80,11 +51,48 @@
 			width: 100%;
 		}
 	}
+	.mainTitle {
+		width: 85%;
+		max-width: 830px;
+	}
+	.mainText {
+		width: 85%;
+		max-width: 830px;
+		&__container {
+			p { font-size: 20px; }
+		}
+	}
 }
+
 @include responsive3() {
 	.mainImage {
-		.descript {
-			font-size: 14px;
+		.descript { font-size: 14px; }
+	}
+	.mainTitle {
+		margin-top: 20px;
+		margin-bottom: 50px;
+		display: flex;
+		justify-content: center;
+		&__container {
+			padding: 0px 100px;
+			.info {
+				font-size: 17px;
+				font-weight: 300;
+			}
+			.title {
+				font-size: 34px;
+				line-height: 37px;
+			}
+			
+		}
+	}
+	.mainText {
+		&__container {
+			padding: 0px 100px;
+			p {
+				font-size: 21px;
+				margin-bottom: 30px;
+			}
 		}
 	}
 }
