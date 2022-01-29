@@ -11,8 +11,8 @@
 				padding: 15px;
 				display: flex;
 				flex-direction: column;
-				.topic {
-					@include fontstyle($top-nav-font,10px,300,$softBlue);
+				.theme {
+					@include fontstyle($top-nav-font,10px,400,$softBlue);
 					letter-spacing: .5px;
 					text-transform: uppercase;
 				}
@@ -22,15 +22,14 @@
 					margin-bottom: 5px;
 				}
 				.date {
-					@include fontstyle($top-nav-font,9px,300,grey);
+					@include fontstyle($top-nav-font,10px,300,grey);
 				}
 			}
 		}
 	}
 }
-
 @include responsive1() {
-		.list {
+	.list {
 		margin-top: 30px;
 		width: 80%;
 		&__container {
@@ -48,56 +47,41 @@
 				.text-container {
 					width: 60%;
 					padding: 0px 10px;
-					.topic { font-size: 12px; }
-					.title { font-size: 21px; }
-					.date { font-size: 10px; }
-				}
-			}
-		}
-	}
-}
-
-@include responsive2(){
-	
-	.list {
-		&__container {
-			.box {
-				.text-container {
-					.title {
-						font-size: 24px;
-						line-height: 24px;
+					.theme { 
+						font-size: 13px; 
+						text-transform: none;
 					}
+					.title { font-size: 21px; }
+					.date { font-size: 12px; }
 				}
 			}
-			.box:first-child { border-top: 1px solid $veryLightGrey; }
 		}
 	}
 }
-
 @include responsive3() {
-		.list {
-		margin-top: 80px;
+	.list {
+	margin-top: 80px;
 		&__container {
 			.box {
 				padding-bottom: 15px;
 				padding-top: 15px;
 				.--img { height: 170px; }
 				.text-container {
-					.topic {
-						font-weight: 400;
+					padding: 0px 15px;
+					.theme {
+						font-size: 16px;
+						font-weight: 300;
 						letter-spacing: 1px;
 					}
 					.title {
-						font-weight: 400;
 						font-size: 24px;
 						line-height: 28px;
 						margin-bottom: 10px;
-						//transition: .3s;
-						//&:hover { color: $title-hover; }
 					}
 					.date { font-size: 12px; }
 				}
 			}
+			.box:first-child { border-top: 1px solid $veryLightGrey; }
 		}
 	}
 }

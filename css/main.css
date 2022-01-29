@@ -220,10 +220,10 @@
   display: flex;
   flex-direction: column;
 }
-.list__container .box .text-container .topic {
+.list__container .box .text-container .theme {
   font-family: "Oswald", sans-serif;
   font-size: 10px;
-  font-weight: 300;
+  font-weight: 400;
   color: #328cc1;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -238,7 +238,7 @@
 }
 .list__container .box .text-container .date {
   font-family: "Oswald", sans-serif;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 300;
   color: grey;
 }
@@ -266,23 +266,15 @@
     width: 60%;
     padding: 0px 10px;
   }
-  .list__container .box .text-container .topic {
-    font-size: 12px;
+  .list__container .box .text-container .theme {
+    font-size: 13px;
+    text-transform: none;
   }
   .list__container .box .text-container .title {
     font-size: 21px;
   }
   .list__container .box .text-container .date {
-    font-size: 10px;
-  }
-}
-@media only screen and (min-width: 811px) {
-  .list__container .box .text-container .title {
-    font-size: 24px;
-    line-height: 24px;
-  }
-  .list__container .box:first-child {
-    border-top: 1px solid #dfdfdf;
+    font-size: 12px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -296,18 +288,24 @@
   .list__container .box .--img {
     height: 170px;
   }
-  .list__container .box .text-container .topic {
-    font-weight: 400;
+  .list__container .box .text-container {
+    padding: 0px 15px;
+  }
+  .list__container .box .text-container .theme {
+    font-size: 16px;
+    font-weight: 300;
     letter-spacing: 1px;
   }
   .list__container .box .text-container .title {
-    font-weight: 400;
     font-size: 24px;
     line-height: 28px;
     margin-bottom: 10px;
   }
   .list__container .box .text-container .date {
     font-size: 12px;
+  }
+  .list__container .box:first-child {
+    border-top: 1px solid #dfdfdf;
   }
 }
 .main-image-post__container .--main-img {
