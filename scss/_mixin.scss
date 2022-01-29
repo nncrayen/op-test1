@@ -2,7 +2,7 @@
 @mixin responsive1(){ @media only screen and (min-width: 501px){ @content; } }
 @mixin responsive1b(){ @media only screen and (max-width: 500px){ @content; } }
 @mixin responsive2(){ @media only screen and (min-width: 811px){ @content; } }
-@mixin responsive3(){	@media only screen and (min-width: 1200px){ @content; } }
+@mixin responsive3(){ @media only screen and (min-width: 1200px){ @content; } }
 
 @mixin fontstyle($font,$size,$weight,$color){
 	font-family: $font;

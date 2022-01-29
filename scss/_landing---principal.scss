@@ -6,38 +6,34 @@
 		display: flex;
 		align-items: flex-end;
 		.--container {
-			padding: 10px 10px 20px 10px;
+			padding-left: 10px;
+			padding-bottom: 20px;
 			margin-right: 20%;
+			text-shadow: 0px 0px 5px black;
+			@include fontstyle($tags,10px,400,white);
 			.tags {
 				display: flex;
 				flex-direction: column;
 				letter-spacing: 1.5px;
-				text-shadow: 2px 2px 10px black; 
-				@include fontstyle($tags,11px,400,white);
-				.theme { font-size: 14px; }
+				.date { line-height: 10px; }
+				.theme { font-size: 15px; }
 			}
 			.title {
 				@include fontstyle($title-font,27px,600,white);
 				line-height: 29px;
-				text-shadow: 2px 2px 10px black;
 			}
-			.resume {
-				@include fontstyle($title-font,17px,400,white);
-				text-shadow: 2px 2px 10px black;
+			.teaser {
+				font-size: 17px;
 				line-height: 20px;
 				margin-top: 5px;
 			}
-			
 		}
 	}
 	&__box:first-child {
 		height: 100vh;
-		.--container {
-			.title { font-size: 31px; }
-		}
+		.title { font-size: 31px; }
 	}
 }
-
 @include responsive1(){
 	.principal {
 		display: flex;
@@ -62,38 +58,24 @@
 			height: 430px;
 			max-height: 430px;
 			.--container {
-				.resume {
-					font-size: 18px;
-				}
+				.title { font-size: 31px; }
+				.teaser { font-size: 18px; }
 			}
 		}
-	}
-	
+	}	
 }
-
-
-
 @include responsive3(){
 	.principal {		
 		&__box {
 			width: 100%;
 			margin-bottom: 40px;
 			.--container {
-				//margin-right: 30%;
 				.tags {
-					.theme {
-						font-size: 15px;
-						margin-bottom: 3px;
-					}
+					.theme { font-size: 17px; }
 				}
 				.title {
 					font-size: 30px;
-					//transition: .1s;
-					//display: inline;
-					&:hover {
-						color:$lightYellow;
-
-					}
+					&:hover { color: $lightYellow; }
 				}
 			}
 		}
@@ -103,16 +85,14 @@
 			.--container {
 				.title {
 					font-size: 40px;
-					line-height: 38px;
+					line-height: 40px;
 					font-weight: 600;
 				}
-				.resume {
-					font-size: 20px;
-					line-height: 25px;
+				.teaser {
+					font-size: 21px;
+					line-height: 24px;
 				}
 			}
 		}
 	}
-	
-
 }
