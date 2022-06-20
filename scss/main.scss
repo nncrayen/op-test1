@@ -6,16 +6,4 @@
 @import 'landing---list';
 @import 'post';
 
-html { font-size: 100%; }
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-a, a:visited { text-decoration: none; }
-main {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
-}
+

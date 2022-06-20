@@ -1,3 +1,16 @@
+html { font-size: 100%; }
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+a, a:visited { text-decoration: none; }
+main {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
 
 $positions: (
 	l-top: left top, 
@@ -5,6 +18,7 @@ $positions: (
 	l-bottom: left bottom, 
 	r-top: right top, 
 	r-center: right center, 
+	r-bottom: right bottom, 
 	c-top: center top, 
 	c-center: center center, 
 	c-bottom: center bottom);
@@ -15,6 +29,7 @@ $positions: (
 		background-position: $p;
 	}
 }
+
 
 
 

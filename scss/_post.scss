@@ -13,13 +13,13 @@
 		padding: 13px;
 		margin-bottom: 20px;
 		.info {
-			@include fontstyle($top-nav-font,15px,400,$darkGrey);
+			@include fontstyle($top-nav-font,15px,300,$darkGrey);
 			letter-spacing: .7px;
 			.categ { color: $darkRed; }
 			.theme { color: $softBlue; }
 		}
 		.title {
-			@include fontstyle($title-font,27px,600,$darkGrey);
+			@include fontstyle($title-font,27px,500,$darkGrey);
 			line-height: 33px;
 			margin-top: 5px;
 		}
@@ -47,7 +47,7 @@
 		flex-direction: column;
 		align-items: right;
 		&__container {
-			height: 430px;
+			height: 450px;
 			width: 100%;
 		}
 	}

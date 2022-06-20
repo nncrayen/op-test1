@@ -2,6 +2,27 @@
 /*COLORES*/
 /*Color Fonts*/
 /*TIPOGRAFÍAS*/
+html {
+  font-size: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
 .position-l-top {
   background-size: cover;
   background-position: left top;
@@ -25,6 +46,11 @@
 .position-r-center {
   background-size: cover;
   background-position: right center;
+}
+
+.position-r-bottom {
+  background-size: cover;
+  background-position: right bottom;
 }
 
 .position-c-top {
@@ -67,18 +93,6 @@
     margin-top: 10vh;
     height: 100%;
     position: relative;
-    /*&__desktop-nav {
-    	padding-left: 30px;
-    	display: inline;
-    	a {
-    		margin-right: 30px;	
-    		@include fontstyle($top-nav-font,16px,200,$darkGrey);
-    		letter-spacing: 1.4px;
-    		border-bottom: 1px solid transparent;
-    		transition: .3s;
-    		&:hover { border-bottom-color: $softBlue; }	
-    	}
-    }*/
   }
   .header__logo {
     color: #231f20;
@@ -148,8 +162,10 @@
 @media only screen and (min-width: 501px) {
   .principal {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 90%;
   }
   .principal__box {
@@ -169,6 +185,7 @@
   .principal__box:first-child {
     height: 430px;
     max-height: 430px;
+    width: 100%;
   }
   .principal__box:first-child .--container .title {
     font-size: 31px;
@@ -330,7 +347,7 @@
 .mainTitle__container .info {
   font-family: "Oswald", sans-serif;
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 300;
   color: #242424;
   letter-spacing: 0.7px;
 }
@@ -343,7 +360,7 @@
 .mainTitle__container .title {
   font-family: "Oswald", sans-serif;
   font-size: 27px;
-  font-weight: 600;
+  font-weight: 500;
   color: #242424;
   line-height: 33px;
   margin-top: 5px;
@@ -375,7 +392,7 @@
     align-items: right;
   }
   .mainImage__container {
-    height: 430px;
+    height: 450px;
     width: 100%;
   }
 
@@ -422,26 +439,6 @@
     font-size: 21px;
     margin-bottom: 30px;
   }
-}
-html {
-  font-size: 100%;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-a, a:visited {
-  text-decoration: none;
-}
-
-main {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */

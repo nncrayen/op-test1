@@ -5,6 +5,7 @@
 		width: 100%;
 		display: flex;
 		align-items: flex-end;
+		
 		.--container {
 			padding-left: 10px;
 			padding-bottom: 20px;
@@ -37,8 +38,11 @@
 @include responsive1(){
 	.principal {
 		display: flex;
-		flex-direction: column;
+		//flex-direction: column;
+		flex-wrap: wrap;
 		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
 		width: 90%;
 		&__box {
 			border-bottom: none;
@@ -57,6 +61,8 @@
 		&__box:first-child {
 			height: 430px;
 			max-height: 430px;
+
+			width: 100%;
 			.--container {
 				.title { font-size: 31px; }
 				.teaser { font-size: 18px; }
@@ -64,6 +70,7 @@
 		}
 	}	
 }
+
 @include responsive3(){
 	.principal {		
 		&__box {
